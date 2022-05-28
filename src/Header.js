@@ -1,4 +1,5 @@
 import'./Header.css';
+import { Link } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 
@@ -43,12 +44,15 @@ function Header() {
              Prime
              </span>
           </div>
-          <div className="header__optionBasket">
-            <ShoppingBasketIcon/>
-            <span className="header__optionLineTwo header__basketCount">
-               0
-            </span>
-          </div>     
+          <Link to="/checkout" style={{textdecoration:'none'}}>
+            <div className="header__optionBasket">
+               <ShoppingBasketIcon/>
+               <span className="header__optionLineTwo header__basketCount">
+                  0
+               </span>
+            </div> 
+          </Link>
+              
        </div>
     </div>
   )
