@@ -3,15 +3,19 @@ import { Link } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { useStateValue} from "./StateProvider";
+
 function Header() {
 const [{basket}, dispatch] = useStateValue();
 
   return (
     <div className='header'>
-       <img
-          className="header__logo" 
-          src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
-       />
+       <Link to="/" style={{textdecoration:'none'}}>
+         <img
+            className="header__logo" 
+            src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+         />
+       </Link>
+      
        <div className="header__search">
           <input className="header__searchInput"
           type="text"
